@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header h1 {
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+fieldset {
+    width: 50px;
+    margin-left: 200px;
+    padding: 7px;
+    text-align: left;
+    width: fit-content;
+    margin-top: 15px;
+}
+
+p {
+    margin-top: 15px;
+    margin-left: 220px;
+}
+
+header div {
+    margin-right: 240px;
+}
+
