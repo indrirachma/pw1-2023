@@ -120,6 +120,7 @@ header.shadow {
   font-size: 1rem;
   color: var(--main-color);
 }
+
 .search-box input::placeholder {
   font-size: 1rem;
   font-weight: 500;
@@ -179,6 +180,7 @@ header.shadow {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
+
 .about-text p {
   font-size: 0.938rem;
   margin: 0.5rem 0 1.1rem;
@@ -368,16 +370,13 @@ header.shadow {
 }
 
 /*  Responsive */
-
 @media (max-width: 1058px){
   header {
     padding: 16px 4%;
   }
-
   section {
     padding: 50px 60px;
   }
-
   .home-text h1 {
     font-size: 2rem;
   }
@@ -387,11 +386,9 @@ header.shadow {
   header {
     padding: 12px 4%;
   }
-
   #menu-icon {
     display: initial;
   }
-
   .navbar {
     position: absolute;
     top: -570px;
@@ -405,19 +402,15 @@ header.shadow {
     transition: 0.3s;
     text-align: center;
   }
-
   .navbar a {
     color: var(--text-color);
   }
-
   .navbar a:hover {
     color: var(--bg-color);
   }
-
   .navbar.active {
     top: 100%;
   }
-
   .about {
     align-items: center;
   }
