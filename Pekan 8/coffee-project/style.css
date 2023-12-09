@@ -168,7 +168,7 @@ header.shadow {
 .about {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-  /* align-items: center; */
+  align-items: center;
   gap: 1.5rem;
 }
 
