@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            text-align: center;
+        }
+
+        .login-form {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <section class="login-container">
+        <div class="login-form">
+            <div class="login-content"></div>
+                <h1>Login Form</h1>
+                <form action="">
+                    <input type="text" id="username" name="username" required>
+
+                    <input type="password" id="password" name="password" required>
+                        
+                    <button type="button" onclick="authenticate()">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="auth.js"></script>
+</body>
+</html>
