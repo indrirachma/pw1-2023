@@ -32,7 +32,7 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         form {
             margin-top: 20px;
         }
@@ -55,6 +55,7 @@
         }
 
         form input[type="submit"] {
+            padding: 10px;
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
@@ -63,12 +64,59 @@
         }
 
         button {
-            padding: 5px 10px;
             cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        .result {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 26%;
+            margin-right: 26%;
+            padding-top: 30px;
+            padding-bottom: 35px;
+            padding-left: 37px;
+            padding-right: 37px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .error {
             color: red;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 26%;
+            margin-right: 26%;
+            padding-top: 30px;
+            padding-bottom: 35px;
+            padding-left: 37px;
+            padding-right: 37px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -92,7 +140,7 @@
             <input type="number" id="numTickets" min="1" max="10" required>
             <br>
 
-            <button type="button" onclick="validateForm()">SUBMIT</button>
+            <button type="button" onclick="validateForm()">Submit</button>
         </form>
     </section>
 
@@ -122,6 +170,13 @@
                 return;
             }
 
+            // Validate departure time
+            const timeRegex = /^([01]\d|2[0-3]):([0-5]\d)$/;
+            if (!timeRegex.test(departureTime)) {
+                displayError('Enter a valid departure time.');
+                return;
+            }
+
             // Validate number of tickets
             if (numTickets < 1 || numTickets > 10 || isNaN(numTickets)) {
                 displayError('Number of tickets should be between 1 and 10.');
@@ -141,6 +196,7 @@
 
         function displayFormData(name, email, departureTime, numTickets) {
             const resultDiv = document.getElementById('result');
+            resultDiv.className = 'result';
             resultDiv.innerHTML = `<p>Name: ${name}</p>
                                    <p>Email: ${email}</p>
                                    <p>Departure Time: ${departureTime}</p>
